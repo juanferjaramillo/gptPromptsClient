@@ -1,0 +1,8 @@
+- Take the pictures with a mobile device
+- Web client loads the pictures and stores them in Cloudinary, retrieves their URLs.
+- Web client sends the request to the server that sends the request to OpenAI and returns the URL
+    of the resulting image.
+- Web client displays the resulting image.
+
+- Option to download the resulting image with the information of the tiles used.
+- Delete all previous day pictures from the Cloudinary folder. 

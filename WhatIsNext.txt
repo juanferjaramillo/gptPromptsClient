@@ -1,0 +1,2 @@
+- Load images to Cloudinary when click on Diseñar Espacio.
+- Obtener la url de cloudinary y armar el objeto para enviar la solicitud al server

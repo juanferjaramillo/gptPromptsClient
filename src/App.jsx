@@ -62,10 +62,8 @@ const App = () => {
 
   //----------------------------------------------------------------------
   async function handleDisenar() {
-    console.log("serverUrl:", serverUrl)
-    console.log("clientKey:", clientKey);
-    console.log("spaceURL:", spaceUrl);
-    console.log("tileURL:", tileUrl);
+    //console.log("serverUrl:", serverUrl)
+
     const body = {
       imageUrl1: spaceUrl,
       imageUrl2: tileUrl,

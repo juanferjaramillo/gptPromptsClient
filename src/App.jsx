@@ -62,16 +62,13 @@ const App = () => {
 
   //----------------------------------------------------------------------
   async function handleDisenar() {
-    console.log("serverUrl:", serverUrl)
-    console.log("clientKey:", clientKey);
-    console.log("spaceURL:", spaceUrl);
-    console.log("tileURL:", tileUrl);
     const body = {
       imageUrl1: spaceUrl,
       imageUrl2: tileUrl,
       prompt: "Replace the floor on the room in the image with the tiles in the second image.  Keep all objects in the same place.",
       clientKey: clientKey
     }
+    console.log("sending request to OpenAI");
     setLoading(true);
     const resImage = await axios.post(`${serverUrl}sendImagePrompt/`, body);
     setLoading(false);

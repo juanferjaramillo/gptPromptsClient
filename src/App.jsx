@@ -6,6 +6,7 @@ import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import axios from "axios";
 const serverUrl = import.meta.env.VITE_SERVER_URL;
 const clientKey = import.meta.env.VITE_CLIENT_KEY;
+const prompt = import.meta.env.VITE_PROMPT;
 
 const App = () => {
   const [spaceUrl, setSpaceUrl] = useState(null);
@@ -67,7 +68,7 @@ const App = () => {
     const body = {
       imageUrl1: spaceUrl,
       imageUrl2: tileUrl,
-      prompt: "Replace the floor on the room in the image with the tiles in the second image.  Keep all objects in the same place.",
+      prompt: prompt,
       clientKey: clientKey
     }
     console.log("sending request to OpenAI");

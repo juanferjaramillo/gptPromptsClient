@@ -63,8 +63,8 @@ const App = () => {
 
   //----------------------------------------------------------------------
   async function handleDisenar() {
-  
-    
+
+
     const body = {
       imageUrl1: spaceUrl,
       imageUrl2: tileUrl,
@@ -82,10 +82,15 @@ const App = () => {
   //----------------------------------------------------------------
 
   return (
-    <Box p={4} display="flex" flexDirection="column" alignItems="center" gap={3} width="1000px" height="700px" sx={{ border: 1 }}>
-      {loading && <CircularProgress />}
+    <Grid display="flex"
+      flexDirection="column"
+      maxWidth="100vw"
+      p={4} alignItems="center" gap={3} height="700px">
+
+
       <Typography variant="h4">Diseño de espacios IA</Typography>
-      <Grid display="flex" justifyContent="space-between" gap={4}>
+
+      <Grid display="flex" flexDirection="column" gap={4}>
         <Box>
           <ImageUpload label="Seleccione su espacio" onChange={(e) => handleImageChange(e, 'space')} loading={loading} error={error} />
           <ImagePreview src={spaceUrl} title="Su espacio actual aquí" />
@@ -95,13 +100,17 @@ const App = () => {
           <ImagePreview src={tileUrl} title="Cobertura Seleccionada" />
         </Box>
       </Grid>
+
+      {loading && <CircularProgress />}
+
       <Grid mt={"5%"}>
         <Button variant="contained" component="label" startIcon={<CloudUploadIcon />}
           onClick={handleDisenar}
-        >Diseñar el nuevo espacio</Button>
+        >Muestrame mi nuevo piso!</Button>
         <ImagePreview src={resImage} title="Su nuevo diseño aquí" />
       </Grid>
-    </Box>
+
+    </Grid>
   );
 };
 

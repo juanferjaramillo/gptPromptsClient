@@ -1,2 +1,3 @@
-- Load images to Cloudinary when click on Diseñar Espacio.
-- Obtener la url de cloudinary y armar el objeto para enviar la solicitud al server
+- Error on Railway: 
+Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at https://disenoiaserver.up.railway.app:8080/sendImagePrompt/. (Reason: CORS request did not succeed). Status code: (null).
+- Deploy a version without OpenAI request and check for cors functionality

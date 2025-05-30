@@ -85,21 +85,49 @@ const App = () => {
     <Grid display="flex"
       flexDirection="column"
       maxWidth="100vw"
-      p={4} alignItems="center" gap={3} height="700px">
-
+      p={4} alignItems="center" gap={3}
+    >
 
       <Typography variant="h4">Diseño de espacios IA</Typography>
-
-      <Grid display="flex" flexDirection="column" gap={4}>
-        <Box>
+{/*
+      <Grid display="flex" flexDirection="row"
+        wrap='wrap'
+        gap={4}
+        border={1}
+      >
+        <Grid>
           <ImageUpload label="Seleccione su espacio" onChange={(e) => handleImageChange(e, 'space')} loading={loading} error={error} />
           <ImagePreview src={spaceUrl} title="Su espacio actual aquí" />
-        </Box>
-        <Box>
+        </Grid>
+        <Grid>
           <ImageUpload label="Seleccione su Cobertura" onChange={(e) => handleImageChange(e, 'tile')} loading={loading} error={error} />
           <ImagePreview src={tileUrl} title="Cobertura Seleccionada" />
-        </Box>
+        </Grid>
       </Grid>
+*/}
+
+<Grid container spacing={4}>
+  <Grid item xs={12} md={6}>
+    <ImageUpload
+      label="Seleccione su espacio"
+      onChange={(e) => handleImageChange(e, 'space')}
+      loading={loading}
+      error={error}
+    />
+    <ImagePreview src={spaceUrl} title="Su espacio actual aquí" />
+  </Grid>
+
+  <Grid item xs={12} md={6}>
+    <ImageUpload
+      label="Seleccione su Cobertura"
+      onChange={(e) => handleImageChange(e, 'tile')}
+      loading={loading}
+      error={error}
+    />
+    <ImagePreview src={tileUrl} title="Cobertura Seleccionada" />
+  </Grid>
+</Grid>
+
 
       {loading && <CircularProgress />}
 
